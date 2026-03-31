@@ -40,7 +40,7 @@ Hi, I'm Kruthik BT
 
 🔗 Connect With Me
 
-- 💼 LinkedIn: (Add your link)
+- 💼 LinkedIn: in/ kruthik-bt
 - 💻 GitHub: https://github.com/your-kruthikbt
 
 
