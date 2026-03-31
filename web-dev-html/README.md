@@ -14,7 +14,6 @@ HTML (HyperText Markup Language) is used to create the structure of web pages.
     <title>Document Title</title>
 </head>
 <body>
-    <!-- Content goes here -->
 </body>
 </html>
 
