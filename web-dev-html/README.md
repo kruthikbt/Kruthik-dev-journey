@@ -5,10 +5,11 @@
   <b>Learning HTML from basics to advanced 🚀</b><br>
   Building a strong foundation in Web Development
 </p>
-
+<hr>
 
 ## 📌 What is HTML?
 HTML (HyperText Markup Language) is the standard language used to create and structure web pages.
+<hr>
 
 
 ## 🧱 Basic Structure of HTML
@@ -31,7 +32,7 @@ HTML (HyperText Markup Language) is the standard language used to create and str
 ### Images
 html
 <img src="image.jpg" alt="Description" width="300" height="200">
-
+<hr>
 ### Components:
 - `<!DOCTYPE html>`: Declares HTML5 document type
 - `<html>`: Root element with language attribute
