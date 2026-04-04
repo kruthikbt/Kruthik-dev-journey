@@ -1,6 +1,6 @@
 # Kruthik-dev-journey
 
-🚀 Kruthik Dev Journey
+🚀 <u>Kruthik Dev Journey</u>
 
 Welcome to my personal development journey! 👨‍💻
 This repository documents my daily progress, projects, and learnings in Web Development.
