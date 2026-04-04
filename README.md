@@ -4,16 +4,16 @@
 
 Welcome to my personal development journey! 👨‍💻
 This repository documents my daily progress, projects, and learnings in Web Development.
-
-👨‍💻 About Me
+<hr>
+👨‍💻<b>About Me<b>
 
 Hi, I'm Kruthik BT
 
 - 🌱 Currently learning Web Development
 - 💡 Passionate about building real-world projects
 - 🚀 Goal:contribute to impactful projects
-
-🛣️ Learning Roadmap
+<hr>
+🛣️ <b>Learning Roadmap<b>
 
 - ✅ HTML5
 - ✅ CSS3
@@ -23,28 +23,29 @@ Hi, I'm Kruthik BT
 
 📂 Projects
 
-📚 Resources I Use
+📚<b>Resources I Use<b>
 
 - YouTube Tutorials
 - Official Documentation
 - Online Coding Platforms
+<hr>
 
-
-🎯 Goals
+🎯<b>Goals</b>
 
 - Build 10+ real-world projects
 - Master JavaScript
 - Learn React and Backend Development
 - Contribute to Open Source
+<hr>
 
+🔗 <b>Connect With Me</b>
 
-🔗 Connect With Me
 
 - 💼 LinkedIn: in/ kruthik-bt
 - 💻 GitHub: https://github.com/your-kruthikbt
+<hr>
 
-
-⭐ Support
+⭐ <b>Support</b>
 
 If you like this journey, feel free to star ⭐ the repo and follow my progress!
 
