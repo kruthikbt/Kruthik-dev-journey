@@ -20,9 +20,10 @@ Hi, I'm Kruthik BT
 - 🔄 JavaScript (In Progress)
 - ⏳ React.js
 - ⏳ Node.js & Backend Development
-
+<hr>
 📂 Projects<br>
 <b>1.My_Portfolio</b>
+<hr>
 
 📚<b>Resources I Use<b>
 
