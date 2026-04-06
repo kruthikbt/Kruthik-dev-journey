@@ -3,7 +3,7 @@
 🚀 <u>Kruthik Dev Journey</u>
 
 Welcome to my personal development journey! 👨‍💻
-This repository documents my daily progress, projects, and learnings in Web Development.
+This repository documents my daily progress, projects, and learnings in <b>Web Development</b>.
 <hr>
 👨‍💻<b>About Me<b>
 
@@ -43,7 +43,7 @@ Hi, I'm Kruthik BT
 🔗 <b>Connect With Me</b>
 
 
-- 💼 LinkedIn: in/ kruthik-bt
+- 💼 LinkedIn: in/kruthik-bt
 - 💻 GitHub: https://github.com/your-kruthikbt
 <hr>
 
