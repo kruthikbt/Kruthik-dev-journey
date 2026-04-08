@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="/action.php">
+    <h3><u>My Website Survey Report</u></h3>
+    <b>Name</b>: <input type="text" name="name" placeholder="Enter your Name"><br><br>
+    <b>Password</b>: <input type="password" name="password" placeholder="Enter ERP password"><br><br>
+    <b>Email</b>: <input type="email" name="email" placeholder="eg:@acharya.ac.in"><br><br>
+    <b>Branch</b>: <select name="Branch">
+        <option value="AIML">AIML</option>
+        <option value="CSE">CSE</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="EC">EC</option>
+        <option value="EEE">EEE</option>
+    </select><br><br>
+    <b>RATINGS</b>:<br> 
+    <label><input type="radio" value="Excellent(5)" name="rating">Excellent- 5⭐</label><br>
+    <label><input type="radio" value="Good(4)" name="rating">Good- 4⭐</label><br>
+    <label><input type="radio" value="Can do better(3)" name="rating">Can do better- 3⭐</label><br>
+    <label><input type="radio" value="Irrelevant(2)" name="rating">Irrelevant- 2⭐</label><br>
+    <label><input type="radio" value="Bad(1)" name="rating">Bad- 1⭐</label><br><br>
+    <b>Feedback</b>: <textarea rows="4" name="Feedback" placeholder="Mention valuable insights"></textarea><br><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
