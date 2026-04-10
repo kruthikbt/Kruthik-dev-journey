@@ -24,7 +24,7 @@ Hi, I'm Kruthik BT
 - ⏳ Node.js & Backend Development
 <hr>
 📂 Projects<br>
-<b>1.My_Portfolio</b>
+<b>1.My_Portfolio</b><br>
 <b>2.Survey Form</b>
 <hr>
 
