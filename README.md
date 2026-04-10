@@ -52,6 +52,6 @@ Hi, I'm Kruthik BT
 
 ⭐ <b>Support</b>
 
-If you like this journey, feel free to star ⭐ the repo and follow my progress!
+If you like this journey, feel free to star ⭐ the repo and follow my progress!!! 
 
 «"Consistency is the key to success." »
