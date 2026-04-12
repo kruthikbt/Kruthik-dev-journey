@@ -36,6 +36,9 @@ html
 ### Components:
 - `<!DOCTYPE html>`: Declares HTML5 document type
 - `<html>`: Root element with language attribute
-- `<head>`: Contains meta information, title, links to stylesheets
+- `<head>`: Contains meta information, title, links to stylesheets that is not displayed on web page. 
 - `<body>`: Contains the visible page content
+- `<header>`:Contains Main heading of the body. 
+- `<main>`:The main contenr part within the body. 
+- `<footer>`:The ending part of the body of the web page. 
 
