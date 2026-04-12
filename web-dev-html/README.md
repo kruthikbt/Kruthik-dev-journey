@@ -3,7 +3,7 @@
 
 <p align="center">
   <b>Learning HTML from basics to advanced 🚀</b><br>
-  Building a strong foundation in Web Development
+  Building a very strong foundation in Web Development
 </p>
 <hr>
 
