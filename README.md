@@ -50,7 +50,7 @@ Hi, I'm Kruthik BT
 - 💻 GitHub: https://github.com/your-kruthikbt
 <hr>
 
-⭐ <b>Support</b>
+⭐ <b><u>Support</u></b>
 
 If you like this journey, feel free to star ⭐ the repo and follow my progress!!! 
 
