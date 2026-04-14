@@ -4,7 +4,7 @@
 #                                                Kruthik-dev-journey
 </pre>
 
-Welcome to my  development journey! 👨‍💻
+<b>Welcome to my  development journey!</b>👨‍💻
 This repository documents my daily progress, projects, and learnings in <b>Web Development</b>.
 <hr>
 👨‍💻<b>About Me<b>
