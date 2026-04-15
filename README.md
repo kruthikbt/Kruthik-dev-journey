@@ -28,7 +28,7 @@ Hi, I'm Kruthik BT
 <b>2.Survey Form</b>
 <hr>
 
-📚<b>Resources I Use<b>
+📚<b>Resources I Used<b>
 
 - YouTube Tutorials
 - Official Documentation
