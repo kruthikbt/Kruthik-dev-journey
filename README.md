@@ -13,7 +13,7 @@ Hi, I'm Kruthik BT
 
 - 🌱 Currently learning Web Development
 - 💡 Passionate about building real-world projects
-- 🚀 Goal:contribute to impactful projects and Innovating new ideas... 
+- 🚀 Goal:Contribute to impactful projects and Innovating new ideas... 
 <hr>
 🛣️ <b>Learning Roadmap<b>
 
