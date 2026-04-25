@@ -12,7 +12,7 @@ This repository  documents my daily progress,projects,and learnings  in <b> Web 
 Hi, I'm Kruthik BT
 
 - 🌱 Currently learning Web Development
-- 💡 Passionate about building real-world projects
+- 💡 Passionate about building real-world  projects
 - 🚀 Goal:Contribute to impactful projects and Innovating new ideas... 
 <hr>
 🛣️ <b>Learning Roadmap<b>
