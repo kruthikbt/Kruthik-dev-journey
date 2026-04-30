@@ -12,7 +12,7 @@ HTML (HyperText Markup Language) is the standard language used to create and str
 <hr>
 
 
-## 🧱 Basic Structure of  HTML
+## 🧱 Basic Structure of   HTML
 
 ```html
 <!DOCTYPE html>
