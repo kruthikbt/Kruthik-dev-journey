@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ResumeAI — Craft Your Perfect Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">
+    <svg viewBox="0 0 28 28" fill="none">
+      <rect width="28" height="28" rx="7" fill="#b07d3a"/>
+      <rect x="6" y="7" width="16" height="2" rx="1" fill="#fff"/>
+      <rect x="6" y="11" width="12" height="2" rx="1" fill="#fff" opacity="0.7"/>
+      <rect x="6" y="15" width="14" height="2" rx="1" fill="#fff" opacity="0.7"/>
+      <rect x="6" y="19" width="10" height="2" rx="1" fill="#fff" opacity="0.5"/>
+    </svg>
+    Resume<span>AI</span>
+  </a>
+  <div class="nav-right">
+    <span class="theme-label" id="theme-lbl">Light</span>
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode"></button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="5"/></svg>
+    AI-Powered Resume Builder
+  </div>
+  <h1>Craft Your <em>Perfect</em> Resume in Minutes</h1>
+  <p>Tell us about yourself, and our AI will generate a polished, professional resume tailored to your career goals.</p>
+  <a href="#builder" class="hero-cta">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    Start Building
+  </a>
+</div>
+
+<div class="app-layout" id="builder">
+  <!-- FORM PANEL -->
+  <div class="form-panel">
+    <div class="panel-header">
+      <span class="panel-title">Your Information</span>
+      <span class="step-info" id="step-counter">Step 1 of 5</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress" style="width:20%"></div></div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="0">
+        <span class="tab-num"><span class="tab-num-inner">1</span></span>
+        Personal
+      </button>
+      <button class="tab" data-tab="1">
+        <span class="tab-num"><span class="tab-num-inner">2</span></span>
+        Skills
+      </button>
+      <button class="tab" data-tab="2">
+        <span class="tab-num"><span class="tab-num-inner">3</span></span>
+        Experience
+      </button>
+      <button class="tab" data-tab="3">
+        <span class="tab-num"><span class="tab-num-inner">4</span></span>
+        Education
+      </button>
+      <button class="tab" data-tab="4">
+        <span class="tab-num"><span class="tab-num-inner">5</span></span>
+        Generate
+      </button>
+    </div>
+
+    <!-- STEP 1: PERSONAL -->
+    <div class="form-section active" data-section="0">
+      <h3>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:var(--accent)"><path d="M8 8a3 3 0 100-6 3 3 0 000 6zm-5 6a5 5 0 0110 0H3z"/></svg>
+        Personal Details
+      </h3>
+      <div class="form-row">
+        <div class="field"><label>First Name *</label><input type="text" id="fname" placeholder="e.g. Alex"/></div>
+        <div class="field"><label>Last Name *</label><input type="text" id="lname" placeholder="e.g. Morgan"/></div>
+      </div>
+      <div class="field"><label>Professional Title *</label><input type="text" id="title" placeholder="e.g. Senior Software Engineer"/></div>
+      <div class="form-row">
+        <div class="field"><label>Email *</label><input type="email" id="email" placeholder="alex@example.com"/></div>
+        <div class="field"><label>Phone</label><input type="tel" id="phone" placeholder="+1 (555) 000-0000"/></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Location</label><input type="text" id="location" placeholder="e.g. San Francisco, CA"/></div>
+        <div class="field"><label>LinkedIn URL</label><input type="text" id="linkedin" placeholder="linkedin.com/in/username"/></div>
+      </div>
+      <div class="field"><label>Portfolio / Website</label><input type="text" id="website" placeholder="e.g. alexmorgan.dev"/></div>
+      <div class="field">
+        <label>Professional Summary</label>
+        <textarea id="summary" placeholder="Write 2-3 sentences about who you are, your expertise, and your career goals. This helps the AI craft a compelling opening statement."></textarea>
+      </div>
+    </div>
+
+    <!-- STEP 2: SKILLS -->
+    <div class="form-section" data-section="1">
+      <h3>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:var(--accent)"><path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v1H2V4zm0 3h12v5a2 2 0 01-2 2H4a2 2 0 01-2-2V7z"/></svg>
+        Skills & Expertise
+      </h3>
+      <div class="field">
+        <label>Technical Skills</label>
+        <div class="skill-input-wrapper" id="tech-tags" onclick="document.getElementById('skill-input').focus()">
+          <input type="text" id="skill-input" placeholder="Type a skill + Enter..."/>
+        </div>
+        <p class="hint">Press Enter or comma after each skill. e.g. JavaScript, React, Python, AWS...</p>
+      </div>
+      <div class="field">
+        <label>Soft Skills</label>
+        <textarea id="softskills" placeholder="e.g. Team leadership, Agile methodology, Problem-solving, Communication, Project management..." style="min-height:70px"></textarea>
+      </div>
+      <div class="field">
+        <label>Tools & Platforms</label>
+        <textarea id="tools" placeholder="e.g. Git, Jira, Figma, VS Code, Docker, Kubernetes, Slack..." style="min-height:70px"></textarea>
+      </div>
+      <div class="field">
+        <label>Languages</label>
+        <input type="text" id="languages" placeholder="e.g. English (Native), Spanish (Conversational), French (Basic)"/>
+      </div>
+      <div class="field">
+        <label>Certifications</label>
+        <textarea id="certifications" placeholder="e.g. AWS Solutions Architect, Google Cloud Professional, PMP Certification..." style="min-height:70px"></textarea>
+      </div>
+    </div>
+
+    <!-- STEP 3: EXPERIENCE -->
+    <div class="form-section" data-section="2">
+      <h3>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:var(--accent)"><rect x="1" y="4" width="14" height="10" rx="2"/><path d="M5 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/></svg>
+        Work Experience
+      </h3>
+      <div id="exp-list"></div>
+      <button class="add-btn" id="add-exp">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Add Work Experience
+      </button>
+      <div id="exp-form" style="display:none;margin-top:12px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r2);padding:1rem;">
+        <div class="form-row">
+          <div class="field"><label>Job Title *</label><input type="text" id="ef-title" placeholder="e.g. Frontend Engineer"/></div>
+          <div class="field"><label>Company *</label><input type="text" id="ef-company" placeholder="e.g. Acme Corp"/></div>
+        </div>
+        <div class="form-row triple">
+          <div class="field"><label>Start Date</label><input type="text" id="ef-start" placeholder="Jan 2022"/></div>
+          <div class="field"><label>End Date</label><input type="text" id="ef-end" placeholder="Present"/></div>
+          <div class="field"><label>Location</label><input type="text" id="ef-loc" placeholder="Remote / NYC"/></div>
+        </div>
+        <div class="field">
+          <label>Key Responsibilities & Achievements</label>
+          <textarea id="ef-desc" placeholder="Describe your main responsibilities and key achievements. Include numbers where possible: e.g. 'Reduced load time by 40%' or 'Led a team of 8 engineers'." style="min-height:90px"></textarea>
+        </div>
+        <div style="display:flex;gap:8px;justify-content:flex-end;">
+          <button class="btn-prev" onclick="cancelExp()">Cancel</button>
+          <button class="btn-next" onclick="saveExp()">Save Experience</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4: EDUCATION -->
+    <div class="form-section" data-section="3">
+      <h3>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:var(--accent)"><path d="M8 1L1 5l7 4 7-4-7-4zm0 7L1 9.5V12c0 1.1 3.13 2 7 2s7-.9 7-2V9.5L8 8z"/></svg>
+        Education
+      </h3>
+      <div id="edu-list"></div>
+      <button class="add-btn" id="add-edu">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Add Education
+      </button>
+      <div id="edu-form" style="display:none;margin-top:12px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r2);padding:1rem;">
+        <div class="form-row">
+          <div class="field"><label>Degree / Qualification *</label><input type="text" id="edf-degree" placeholder="e.g. B.S. Computer Science"/></div>
+          <div class="field"><label>Institution *</label><input type="text" id="edf-school" placeholder="e.g. MIT"/></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Graduation Year</label><input type="text" id="edf-year" placeholder="e.g. 2020"/></div>
+          <div class="field"><label>GPA / Grade (optional)</label><input type="text" id="edf-gpa" placeholder="e.g. 3.8 / 4.0"/></div>
+        </div>
+        <div class="field"><label>Relevant Coursework / Honors</label><textarea id="edf-notes" placeholder="e.g. Dean's List, Thesis on ML applications, Relevant courses: Data Structures, Algorithms..." style="min-height:70px"></textarea></div>
+        <div style="display:flex;gap:8px;justify-content:flex-end;">
+          <button class="btn-prev" onclick="cancelEdu()">Cancel</button>
+          <button class="btn-next" onclick="saveEdu()">Save Education</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5: GENERATE -->
+    <div class="form-section" data-section="4">
+      <h3>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:var(--accent)"><path d="M13 2L7 8l2 2 5-8zM3 9l2 2L3 14l4-2-2-2z"/></svg>
+        Generate Your Resume
+      </h3>
+      <div style="background:var(--accent-bg);border:1px solid var(--accent-border);border-radius:var(--r2);padding:1.25rem;margin-bottom:1.25rem;">
+        <p style="font-size:0.88rem;color:var(--text2);line-height:1.7;">
+          🎯 This  AI-Resume Builder  will analyze your information and craft a <strong>professional, ATS-optimized resume</strong> with compelling bullet points, quantified achievements, and a strong professional summary.
+        </p>
+      </div>
+      <div class="field">
+        <label>Target Job Role / Industry</label>
+        <input type="text" id="target-role" placeholder="e.g. Senior Full-Stack Engineer at a fintech startup"/>
+      </div>
+      <div class="field">
+        <label>Tone & Style</label>
+        <select id="tone">
+          <option value="professional">Professional & Formal</option>
+          <option value="modern">Modern & Dynamic</option>
+          <option value="creative">Creative & Bold</option>
+          <option value="executive">Executive & Strategic</option>
+          <option value="technical">Technical & Precise</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Additional Notes (Optional)</label>
+        <textarea id="extra-notes" placeholder="Any other details to emphasize? e.g. 'Focus on leadership roles', 'Highlight open source contributions', 'I want to transition from backend to full-stack'..." style="min-height:80px"></textarea>
+      </div>
+      <!-- SUMMARY CARD -->
+      <div id="summary-card" style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--r2);padding:1rem;font-size:0.83rem;color:var(--text2);">
+        <div style="font-weight:600;color:var(--text);margin-bottom:8px;font-size:0.88rem;">Your Information Summary</div>
+        <div id="summary-content"></div>
+      </div>
+    </div>
+
+    <div class="form-nav">
+      <button class="btn-prev" id="btn-prev" onclick="prevStep()" style="visibility:hidden">
+        ← Back
+      </button>
+      <button class="btn-next" id="btn-next" onclick="nextStep()">
+        Next →
+      </button>
+    </div>
+  </div>
+
+  <!-- PREVIEW PANEL -->
+  <div class="preview-panel">
+    <div class="preview-header">
+      <span class="panel-title">Resume Preview</span>
+      <div class="preview-actions">
+        <button class="btn-copy btn-template" id="btn-template" onclick="openTemplateModal()">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 5h10M5 5v7" stroke="currentColor" stroke-width="1.5"/></svg>
+          Template
+        </button>
+        <button class="btn-copy" id="btn-copy" onclick="copyResume()" disabled>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="4" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 10V2h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Copy Text
+        </button>
+        <button class="btn-download" id="btn-dl" onclick="downloadResume()" disabled>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 11h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download
+        </button>
+      </div>
+    </div>
+    <div class="preview-body">
+      <!-- PLACEHOLDER -->
+      <div class="preview-placeholder" id="preview-placeholder">
+        <div class="placeholder-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="3" width="20" height="26" rx="3" stroke="#b07d3a" stroke-width="1.5"/><path d="M10 10h12M10 14h8M10 18h10M10 22h6" stroke="#b07d3a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Your Resume Will Appear Here</h3>
+        <p>Fill in your details and click "Generate Resume" to create your perfect resume with AI.</p>
+      </div>
+      <!-- LOADING -->
+      <div class="loading-state" id="loading-state">
+        <div class="spinner"></div>
+        <p>Crafting your perfect resume...</p>
+        <div class="loading-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text3)">Analyzing your experience and optimizing content</p>
+      </div>
+      <!-- RESUME OUTPUT -->
+      <div class="resume-preview" id="resume-preview"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="template-modal">
+  <div class="modal-card template-modal-card">
+    <div class="modal-body">
+      <div class="modal-header-section">
+        <h3 class="panel-title" style="font-size: 1.3rem;">Choose Template</h3>
+        <button class="modal-close-btn" onclick="closeTemplateModal()" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="template-grid">
+        <button class="template-card active" data-template="template-1" onclick="selectTemplate('template-1')">
+          <span class="template-preview template-preview-1"><i></i><b></b><em></em></span>
+          <span>Template 1</span>
+        </button>
+        <button class="template-card" data-template="template-2" onclick="selectTemplate('template-2')">
+          <span class="template-preview template-preview-2"><i></i><b></b><em></em></span>
+          <span>Template 2</span>
+        </button>
+        <button class="template-card" data-template="template-3" onclick="selectTemplate('template-3')">
+          <span class="template-preview template-preview-3"><i></i><b></b><em></em></span>
+          <span>Template 3</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <div class="toast-dot"></div>
+  <span id="toast-msg">Copied to clipboard!</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

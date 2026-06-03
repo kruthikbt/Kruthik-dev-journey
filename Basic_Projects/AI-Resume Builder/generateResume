@@ -1,0 +1,102 @@
+# Gemini Resume Generation API Reference
+
+This document describes the design, prompt structure, and integration details of the AI Resume Builder using Google Gemini's Structured Outputs API.
+
+---
+
+## 🚀 Native Structured Outputs (Gemini 2.5)
+
+To guarantee that the AI returns highly structured, robust, and clean JSON that conforms exactly to the resume rendering engine, we utilize Gemini's native **Structured Outputs** (`responseSchema`) in `index.html`. 
+
+This eliminates the need for fragile regex cleanup of markdown formatting (e.g. ````json ... ````) and completely avoids JSON parsing errors.
+
+### 1. REST Endpoint Reference
+- **URL:** `https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_KEY}`
+- **Method:** `POST`
+- **Headers:** `Content-Type: application/json`
+
+---
+
+## 📋 JSON Response Schema Definition
+
+The API is configured to enforce the following strict JSON schema representation for the response payload:
+
+```json
+{
+  "type": "OBJECT",
+  "properties": {
+    "name": { 
+      "type": "STRING", 
+      "description": "Full Name of the candidate" 
+    },
+    "title": { 
+      "type": "STRING", 
+      "description": "Professional Title of the candidate" 
+    },
+    "contact": {
+      "type": "OBJECT",
+      "properties": {
+        "email": { "type": "STRING" },
+        "phone": { "type": "STRING" },
+        "location": { "type": "STRING" },
+        "linkedin": { "type": "STRING" },
+        "website": { "type": "STRING" }
+      },
+      "required": ["email"]
+    },
+    "summary": { 
+      "type": "STRING", 
+      "description": "3-4 sentence professional summary tailored to target role" 
+    },
+    "skills": {
+      "type": "OBJECT",
+      "properties": {
+        "technical": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "soft": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "tools": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "certifications": { "type": "ARRAY", "items": { "type": "STRING" } },
+        "languages": { "type": "ARRAY", "items": { "type": "STRING" } }
+      }
+    },
+    "experience": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "title": { "type": "STRING" },
+          "company": { "type": "STRING" },
+          "duration": { "type": "STRING" },
+          "location": { "type": "STRING" },
+          "bullets": { "type": "ARRAY", "items": { "type": "STRING" } }
+        },
+        "required": ["title", "company"]
+      }
+    },
+    "education": {
+      "type": "ARRAY",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "degree": { "type": "STRING" },
+          "school": { "type": "STRING" },
+          "year": { "type": "STRING" },
+          "gpa": { "type": "STRING" },
+          "honors": { "type": "STRING" }
+        },
+        "required": ["degree", "school"]
+      }
+    }
+  },
+  "required": ["name", "title", "summary", "skills", "experience", "education"]
+}
+```
+
+---
+
+## 🌟 Upgraded Gemini Models (2026 Stable Release)
+
+We have updated the model dropdown configuration in `index.html` to support the newest stable Gemini releases:
+1. **Gemini 2.5 Flash** (`gemini-2.5-flash`): Recommended default model. Lightning-fast response, state-of-the-art cost-effectiveness, and high-fidelity output.
+2. **Gemini 2.5 Pro** (`gemini-2.5-pro`): Ideal for advanced reasoning, complex job descriptions, and deep customization.
+3. **Gemini 2.0 Flash** (`gemini-2.0-flash`): Next-gen low latency.
+4. **Gemini 1.5 Flash** & **Gemini 1.5 Pro**: Included as legacy fallbacks.
