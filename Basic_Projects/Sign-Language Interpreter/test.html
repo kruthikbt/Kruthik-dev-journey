@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sign Language Interpreter — AI Powered</title>
+    
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+<!-- Controls -->
+<div class="top-controls">
+    <select class="lang-select" id="lang-select" aria-label="Select Language">
+        <option value="en">English</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="hi">हिन्दी</option>
+    </select>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+</div>
+
+<!-- Loading screen -->
+<div id="loading-screen">
+    <div class="load-spinner"></div>
+    <div class="load-title" data-i18n="load_title">Sign Language AI</div>
+    <div class="load-msg" id="load-msg" data-i18n="loading_model">Loading MediaPipe Hands model…</div>
+</div>
+
+<div class="app" id="app" style="display:none">
+
+    <div class="header">
+        <div class="header-badge"><div class="pulse-dot"></div><span data-i18n="live_status">Live Camera · AI Recognition</span></div>
+        <h1 data-i18n="title">Sign Language<br>Interpreter</h1>
+        <p data-i18n="description">Show ASL hand gestures to your camera — confidence threshold at 75%</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row" style="margin-bottom:1rem">
+        <div class="stat-c"><span class="stat-v" id="s-total" style="color:var(--accent)">0</span><span class="stat-l" data-i18n="stat_total">Total Signs</span></div>
+        <div class="stat-c"><span class="stat-v" id="s-clear" style="color:var(--accent2)">0</span><span class="stat-l" data-i18n="stat_recognized">Recognized</span></div>
+        <div class="stat-c"><span class="stat-v" id="s-unclear" style="color:var(--danger)">0</span><span class="stat-l" data-i18n="stat_unclear">Unclear</span></div>
+    </div>
+
+    <div class="main-grid">
+
+        <!-- LEFT: Camera -->
+        <div>
+            <div class="camera-wrap">
+                <div class="video-container">
+                    <div class="bracket btl"></div><div class="bracket btr"></div>
+                    <div class="bracket bbl"></div><div class="bracket bbr"></div>
+                    <div class="scanline"></div>
+                    <video id="input-video" playsinline muted></video>
+                    <canvas id="output-canvas"></canvas>
+                    <div class="no-cam-msg" id="no-cam-msg">
+                        <div class="no-cam-icon">📷</div>
+                        <div class="no-cam-text" data-i18n="cam_hint">Click <strong>Start Camera</strong> below<br>to enable live hand tracking</div>
+                    </div>
+                </div>
+                <div class="cam-bar">
+                    <div class="rec"><div class="rec-dot"></div><span id="cam-status" data-i18n="status_waiting">WAITING</span></div>
+                    <div class="fps-txt" id="fps-txt">— FPS</div>
+                </div>
+                <button id="start-btn" onclick="startCamera()" data-i18n="start_btn">▶ Start Camera & Begin Recognition</button>
+            </div>
+
+            <!-- Landmark detail -->
+            <div class="landmark-card" style="margin-top:.9rem">
+                <div class="card-label" data-i18n="lm_analysis">Hand Landmark Analysis</div>
+                <div class="lm-grid" id="lm-grid">
+                    <div class="lm-chip"><div class="lm-name">Wrist</div><div class="lm-val" id="lm-wrist">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Index Tip</div><div class="lm-val" id="lm-index">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Middle Tip</div><div class="lm-val" id="lm-middle">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Ring Tip</div><div class="lm-val" id="lm-ring">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Pinky Tip</div><div class="lm-val" id="lm-pinky">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Thumb Tip</div><div class="lm-val" id="lm-thumb">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Fingers Up</div><div class="lm-val" id="lm-fingers">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Hand</div><div class="lm-val" id="lm-hand">—</div></div>
+                    <div class="lm-chip"><div class="lm-name">Gesture ID</div><div class="lm-val" id="lm-id">—</div></div>
+                </div>
+            </div>
+
+            <!-- Gesture guide -->
+            <div class="guide-card" style="margin-top:.9rem">
+                <div class="card-label" data-i18n="supported_gestures">Supported Gestures</div>
+                <div class="guide-grid">
+                    <div class="gesture-chip"><div class="gesture-icon">✊</div><div class="gesture-name">FIST</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🖐</div><div class="gesture-name">OPEN</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">☝️</div><div class="gesture-name">ONE</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">✌️</div><div class="gesture-name">TWO/PEACE</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🤟</div><div class="gesture-name">ILY</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">👍</div><div class="gesture-name">THUMBS UP</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">👎</div><div class="gesture-name">THUMBS DOWN</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🤙</div><div class="gesture-name">CALL ME</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">👌</div><div class="gesture-name">OK</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🤞</div><div class="gesture-name">CROSSED</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🖖</div><div class="gesture-name">VULCAN</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🤘</div><div class="gesture-name">ROCK ON</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">👋</div><div class="gesture-name">WAVE/HELLO</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">🤏</div><div class="gesture-name">PINCH</div></div>
+                    <div class="gesture-chip"><div class="gesture-icon">4️⃣</div><div class="gesture-name">FOUR</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Results -->
+        <div class="right-panel">
+
+            <!-- Result + Confidence -->
+            <div class="result-card">
+                <div class="card-label" data-i18n="interpreted_sign">Interpreted Sign</div>
+                <div class="word-display" id="word-display">
+                    <div class="idle-hint" id="disp-content" data-i18n="cam_idle_hint">
+                        Enable camera &amp; show<br>a hand gesture to begin
+                    </div>
+                </div>
+                <div style="margin-top:1rem">
+                    <div class="conf-row">
+                        <div class="card-label" style="margin:0" data-i18n="confidence">Confidence</div>
+                        <span class="conf-pct" id="conf-pct" style="color:var(--muted)">—</span>
+                    </div>
+                    <div class="conf-track">
+                        <div class="conf-fill" id="conf-fill" style="width:0;background:var(--muted)"></div>
+                        <div class="thresh-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sentence builder -->
+            <div class="sentence-card">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <div class="card-label" style="margin:0" data-i18n="built_sentence">Built Sentence</div>
+                    <div style="font-size:.68rem;color:var(--muted);font-family:'Space Mono',monospace">≥75% only</div>
+                </div>
+                <div class="sentence-box" id="sentence-box">
+                    <div class="cur"></div>
+                </div>
+                <div class="ctrl-bar" style="margin-top:.75rem">
+                    <button class="cbtn" onclick="removeLastWord()" data-i18n="undo">⌫ Undo</button>
+                    <button class="cbtn" onclick="addSpace()" data-i18n="space">␣ Space</button>
+                    <button class="cbtn red" onclick="clearSentence()" data-i18n="clear">✕ Clear</button>
+                </div>
+            </div>
+
+            <!-- History -->
+            <div class="history-card">
+                <div class="hist-hdr">
+                    <div class="card-label" style="margin:0" data-i18n="recognition_history">Recognition History</div>
+                    <span id="hist-count" style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)">0 attempts</span>
+                </div>
+                <div class="hist-list" id="hist-list">
+                    <div class="empty" id="hist-empty" data-i18n="no_history">No attempts yet</div>
+                </div>
+                <div class="ctrl-bar" style="margin-top:.75rem">
+                    <button class="cbtn red" onclick="clearAll()" data-i18n="clear_all">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="test.js"></script>
+</body>
+</html>
