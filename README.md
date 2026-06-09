@@ -1,7 +1,7 @@
 [![MasterHead](https://www.digitalsolutionservices.com/img/services/web%20development.gif)](https://kruthik-iitb.web.app)
 
 <pre>
-#                                                Kruthik-dev- journey
+#                                                Kruthik-dev-journey
 </pre>
 
 <b>Welcome to my  development journey!</b><br>👨‍💻
