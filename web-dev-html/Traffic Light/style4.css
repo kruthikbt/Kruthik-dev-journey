@@ -1,0 +1,27 @@
+#outer{
+    height:400px;
+    width:100px;
+    background-color: bisque;
+
+}
+#one{
+    height:100px;
+    width:100px;
+     border-radius: 50%;
+    background-color:#ff0000;
+
+}
+#two{
+    height:100px;
+    width:100px;
+     border-radius: 50%;
+    background-color: #ffff00;
+
+}
+#three{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    background-color: #00ff00;
+
+}
