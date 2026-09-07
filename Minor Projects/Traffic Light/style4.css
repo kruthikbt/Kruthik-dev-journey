@@ -2,26 +2,26 @@
     height:400px;
     width:100px;
     background-color: bisque;
-
+    border:2px solid black;
 }
 #one{
     height:100px;
     width:100px;
      border-radius: 50%;
     background-color:#ff0000;
-
+    border:2px solid black;
 }
 #two{
     height:100px;
     width:100px;
      border-radius: 50%;
     background-color: #ffff00;
-
+    border:2px solid black;
 }
 #three{
     height:100px;
     width:100px;
     border-radius: 50%;
     background-color: #00ff00;
-
+    border:2px solid black;
 }
