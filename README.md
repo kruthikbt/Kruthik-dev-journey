@@ -15,7 +15,8 @@ Hi, I'm Kruthik BT
 <hr>
 <hr>
 
-<pre>🛣️ <b>Learning Roadmap<b></pre>
+<pre>🛣️ <b>Learning Roadmap<b>
+</pre>
 
 - ✅ HTML5
 - ✅ CSS3
@@ -29,11 +30,11 @@ Hi, I'm Kruthik BT
 <b>2.Survey Form</b>
 <hr>
 
-📚<b>Resources I Used<b>
+<pre>📚<b>Resources I Used<b></pre>
 
 - YouTube Tutorials
 - Official Documentation
-- Online Coding Platforms
+- Online Coding Platforms-Havker Rank,W3 Schools.
 <hr>
 
 🎯<b>Goals</b>
