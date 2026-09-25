@@ -2,7 +2,7 @@
 
                                           
 <h1><b>Welcome to my  development
- journey</h1>!</b><br>👨‍💻
+ journey!</h1></b><br>👨‍💻
 This repository  documents my daily progress,projects,and learnings  in <b> Web Development</b>.
 <hr>
       <pre>👨‍💻<b>About Me<b> </pre>
