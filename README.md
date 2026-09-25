@@ -25,7 +25,7 @@ Hi, I'm Kruthik BT
 - ⏳ React.js
 - ⏳ Node.js & Backend Development
 <hr>
-📂 Projects<br>
+<pre> 📂 Projects<br> </pre>
 <b>1.My_Portfolio</b><br>
 <b>2.Survey Form</b>
 <hr>
@@ -37,7 +37,7 @@ Hi, I'm Kruthik BT
 - Online Coding Platforms-Havker Rank,W3 Schools.
 <hr>
 
-🎯<b>Goals</b>
+<pre>🎯<b>Goals</b></pre>
 
 - Build 10+ real-world projects
 - Master JavaScript
@@ -45,7 +45,7 @@ Hi, I'm Kruthik BT
 - Contribute to Open Source
 <hr>
 
-🔗 <b>Connect With Me</b>
+<pre>🔗 <b>Connect With Me</b></pre>
 
 
 - 💼 LinkedIn: https://www.linkedin.com/in/kruthik-bt-825729373
