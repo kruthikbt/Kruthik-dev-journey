@@ -19,6 +19,7 @@ Hi, I'm Kruthik BT
 - ✅ HTML5
 - ✅ CSS3
 - 🔄 JavaScript (In Progress)
+- ⏳Bootstrap 
 - ⏳ React.js
 - ⏳ Node.js & Backend Development
 <hr>
