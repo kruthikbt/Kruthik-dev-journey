@@ -46,7 +46,7 @@ Hi, I'm Kruthik BT
 🔗 <b>Connect With Me</b>
 
 
-- 💼 LinkedIn: in/kruthik-bt
+- 💼 LinkedIn: https://www.linkedin.com/in/kruthik-bt-825729373
 - 💻 GitHub: https://github.com/your-kruthikbt
 <hr>
 
