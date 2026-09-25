@@ -15,7 +15,7 @@ Hi, I'm Kruthik BT
 <hr>
 <hr>
 
-<pre>🛣️ <b>Learning Roadmap<b>
+<pre>🛣️<b>Learning Roadmap<b>
 </pre>
 
 - ✅ HTML5
