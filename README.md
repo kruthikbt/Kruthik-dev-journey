@@ -1,7 +1,8 @@
 [![MasterHead](https://www.digitalsolutionservices.com/img/services/web%20development.gif)](https://kruthik-iitb.web.app)
 
                                           
-<h1><b>Welcome to my  development</h1> journey!</b><br>👨‍💻
+<h1><b>Welcome to my  development
+ journey</h1>!</b><br>👨‍💻
 This repository  documents my daily progress,projects,and learnings  in <b> Web Development</b>.
 <hr>
       <pre>👨‍💻<b>About Me<b> </pre>
