@@ -5,7 +5,7 @@
 <b>Welcome to my  development journey!</b><br>👨‍💻
 This repository  documents my daily progress,projects,and learnings  in <b> Web Development</b>.
 <hr>
-      <pre>👨‍💻<b>About Me<b></pre>
+      <pre>👨‍💻<b>About Me<b> </pre>
 
 Hi, I'm Kruthik BT
 
@@ -13,7 +13,9 @@ Hi, I'm Kruthik BT
 - 💡 Passionate about building real-world  projects
 - 🚀 Goal:Contribute to impactful projects and Innovating new ideas... 
 <hr>
-🛣️ <b>Learning Roadmap<b>
+<hr>
+
+<pre>🛣️ <b>Learning Roadmap<b></pre>
 
 - ✅ HTML5
 - ✅ CSS3
