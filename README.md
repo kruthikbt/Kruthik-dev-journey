@@ -37,7 +37,7 @@ Hi, I'm Kruthik BT
 - Online Coding Platforms-Havker Rank,W3 Schools.
 <hr>
 
-<pre>🎯<b>Goals</b></pre>
+<pre>🎯<h2><b>Goals</b></h2></b></pre>
 
 - Build 10+ real-world projects
 - Master JavaScript
