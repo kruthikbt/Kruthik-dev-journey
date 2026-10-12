@@ -15,8 +15,8 @@ Hi, I'm Kruthik BT
 <hr>
 <hr>
 
-<pre>🛣️<b>Learning Roadmap<b>
-</pre>
+<h1><pre>🛣️<b>Learning Roadmap<b>
+</pre></h1>
 
 - ✅ HTML5
 - ✅ CSS3
@@ -25,7 +25,8 @@ Hi, I'm Kruthik BT
 - ⏳ React.js
 - ⏳ Node.js & Backend Development
 <hr>
-<h2></h2><pre> 📂 Projects<br> </pre></h2>
+
+<h1><pre> 📂 Projects<br> </pre></h1>
 <b>1.My_Portfolio</b><br>
 <b>2.Survey Form</b>
 <hr>
@@ -52,7 +53,7 @@ Hi, I'm Kruthik BT
 - 💻 GitHub: https://github.com/kruthikbt
 <hr>
 
-<h1><pre><⭐ <b><u>Support</u></b></pre></h1>
+<h1><pre>⭐ <b><u>Support</u></b></pre></h1>
 
 If you like this journey, feel free to star ⭐ the repo and follow my progress!!! 
 
