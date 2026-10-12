@@ -5,7 +5,7 @@
  journey!</h1></b><br>👨‍💻
 This repository  documents my daily progress,projects,and learnings  in <b> Web Development</b>.
 <hr>
-      <pre>👨‍💻<b> About Me<b>  </pre>
+      <pre>👨‍💻<b> <h1>About Me</h1><b>  </pre>
 
 Hi, I'm Kruthik BT
 
