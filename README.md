@@ -15,7 +15,7 @@ Hi, I'm Kruthik BT
 <hr>
 <hr>
 
-<h1><pre>🛣️<b>Learning Roadmap<b>
+<h1><pre>🛣️<b>Learning Roadmap-<b>
 </pre></h1>
 
 - ✅ HTML5
@@ -26,19 +26,19 @@ Hi, I'm Kruthik BT
 - ⏳ Node.js & Backend Development
 <hr>
 
-<h1><pre> 📂 Projects<br> </pre></h1>
+<h1><pre> 📂 Projects-<br> </pre></h1>
 <b>1.My_Portfolio</b><br>
 <b>2.Survey Form</b>
 <hr>
 
-<h1><pre>📚<b>Resources I Used<b></pre></h1>
+<h1><pre>📚<b>Resources I Used-<b></pre></h1>
 
 - YouTube Tutorials
 - Official Documentation
 - Online Coding Platforms-Havker Rank,W3 Schools.
 <hr>
 
-<h1><pre>🎯<b>Goals</b></b></pre></h1>
+<h1><pre>🎯<b>Goals-</b></b></pre></h1>
 
 - Build 10+ real-world projects
 - Master JavaScript
@@ -46,7 +46,7 @@ Hi, I'm Kruthik BT
 - Contribute to Open Source
 <hr>
 
-<h2><pre>🔗 <b>Connect With Me</b></b></pre></h2>
+<h2><pre>🔗 <b>Connect With Me-</b></b></pre></h2>
 
 
 - 💼 LinkedIn: https://www.linkedin.com/in/kruthik-bt-825729373
