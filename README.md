@@ -37,7 +37,7 @@ Hi, I'm Kruthik BT
 - Online Coding Platforms-Havker Rank,W3 Schools.
 <hr>
 
-<pre>🎯<h2><b>Goals</b></h2></b></pre>
+<pre><h2>🎯<b>Goals</b></h2></b></pre>
 
 - Build 10+ real-world projects
 - Master JavaScript
@@ -45,14 +45,14 @@ Hi, I'm Kruthik BT
 - Contribute to Open Source
 <hr>
 
-<pre>🔗 <b>Connect With Me</b></pre>
+<pre><h2>🔗 <b>Connect With Me</b></h2></b></pre>
 
 
 - 💼 LinkedIn: https://www.linkedin.com/in/kruthik-bt-825729373
 - 💻 GitHub: https://github.com/kruthikbt
 <hr>
 
-<pre>⭐ <b><u>Support</u></b></pre>
+<pre><h2>⭐ <b><u>Support</u></b><h2></b></pre>
 
 If you like this journey, feel free to star ⭐ the repo and follow my progress!!! 
 
