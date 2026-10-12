@@ -52,7 +52,7 @@ Hi, I'm Kruthik BT
 - 💻 GitHub: https://github.com/kruthikbt
 <hr>
 
-h1><pre><⭐ <b><u>Support</u></b></pre><h1>
+<h1><pre><⭐ <b><u>Support</u></b></pre></h1>
 
 If you like this journey, feel free to star ⭐ the repo and follow my progress!!! 
 
