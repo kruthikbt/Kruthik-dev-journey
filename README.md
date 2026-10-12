@@ -5,7 +5,7 @@
  journey!</h1></b><br>👨‍💻
 This repository  documents my daily progress,projects,and learnings  in <b> Web Development</b>.
 <hr>
-      <h1><pre>👨‍💻<b> About Me<b> </pre></h1>
+      <h1><pre>👨‍💻<b> About Me:<b> </pre></h1>
 
 Hi, I'm Kruthik BT
 
@@ -25,19 +25,19 @@ Hi, I'm Kruthik BT
 - ⏳ React.js
 - ⏳ Node.js & Backend Development
 <hr>
-<pre> 📂 Projects<br> </pre>
+<h2></h2><pre> 📂 Projects<br> </pre></h2>
 <b>1.My_Portfolio</b><br>
 <b>2.Survey Form</b>
 <hr>
 
-<pre>📚<b>Resources I Used<b></pre>
+<h1><pre>📚<b>Resources I Used<b></pre></h1>
 
 - YouTube Tutorials
 - Official Documentation
 - Online Coding Platforms-Havker Rank,W3 Schools.
 <hr>
 
-<pre><h2>🎯<b>Goals</b></h2></b></pre>
+<h1><pre>🎯<b>Goals</b></b></pre></h1>
 
 - Build 10+ real-world projects
 - Master JavaScript
@@ -45,14 +45,14 @@ Hi, I'm Kruthik BT
 - Contribute to Open Source
 <hr>
 
-<pre><h2>🔗 <b>Connect With Me</b></h2></b></pre>
+<h2><pre>🔗 <b>Connect With Me</b></b></pre></h2>
 
 
 - 💼 LinkedIn: https://www.linkedin.com/in/kruthik-bt-825729373
 - 💻 GitHub: https://github.com/kruthikbt
 <hr>
 
-<pre><h1>⭐ <b><u>Support</u></b><h1></pre>
+h1><pre><⭐ <b><u>Support</u></b></pre><h1>
 
 If you like this journey, feel free to star ⭐ the repo and follow my progress!!! 
 
