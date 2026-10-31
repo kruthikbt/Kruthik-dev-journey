@@ -3,7 +3,7 @@
                                           
 <pre><h2><b>Welcome to my development
  journey!</h2></b><br></pre>👨‍💻
-This repository  documents my daily progress,projects,and learnings  in <b> Web Development</b>.
+This repository  documents my daily progress,projects,and learnings  in <b> Web Development </b>.
 <hr>
      <h1><pre> 👨‍💻<b>About  Me:<b> </pre></h1>
 
